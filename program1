@@ -1,0 +1,34 @@
+import turtle
+mul = 1.1 
+intens = 0.2
+turtle.title ("rainbow!")
+turtle.speed (40)
+turtle.bgcolor("black")
+r,g,b = 255,0,0
+size =0
+for i in range (255*2):
+turtle.colormode (255)
+if i < 255|/3:
+g += 3 elif i < 255*2//3:
+r -= 3 elif i < 255:
+b += 3 elif i < 255*4//3:
+g-= 3
+elif i < 255*5//3:
+r += 3 else:
+b -= 3
+size = 50+i/mul
+turtle.fd(size)
+turtle.rt(90+intens)
+turtle.pencolor (r, g, b)
+for i in range (255*2): turtle.colormode (255)
+if i < 255||3:
+g += 3 elif i < 255*2//3:
+r -= 3 elif i < 255:
+b += 3 elif i < 255*4//3:
+g -= 3 elif i < 255*5|/3:
+r += 3 else:
+b -= 3
+turtle.fd(size+i/mul)
+turtle.rt(90+intens)
+turtle.pencolor(r,g, b)
+turtle.done()
